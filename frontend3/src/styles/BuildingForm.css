@@ -1,0 +1,182 @@
+/* Building Form Styles */
+.building-form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.building-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-input, .form-submit, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.form-input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.form-submit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.form-submit:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Results Section */
+.results {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.results h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.results p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.results ul {
+    padding-left: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.results ul li {
+    list-style-type: disc;
+    margin-bottom: 8px;
+}
+
+.results .result-header {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Grafik & Chart Styles */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.chart-container .chart {
+    width: 80%;
+    max-width: 700px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container .chart canvas {
+    width: 100% !important;
+    height: auto !important;  /* Ensure the canvas doesn't stretch */
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+    .building-form-container {
+        width: 90%;
+    }
+
+    .results {
+        width: 100%;
+    }
+
+    .chart-container .chart {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Styling untuk ukuran layar desktop (1024px hingga 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .building-form-container {
+        width: 75%; /* Set width to 75% for better appearance on desktop */
+        margin: 20px auto; /* Center the form */
+    }
+
+    .results {
+        width: 75%;
+        margin: 30px auto; /* Center the results */
+    }
+
+    .chart-container .chart {
+        width: 80%; /* Charts take 80% of screen width */
+        max-width: 900px; /* Limit max width for charts */
+    }
+
+    .form-input, .form-submit, select {
+        font-size: 16px; /* Increase font size for better readability */
+    }
+
+    h2 {
+        font-size: 28px; /* Larger font for headings */
+    }
+
+    .form-submit {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .results h3 {
+        font-size: 16px;
+    }
+
+    .results p, .results ul li {
+        font-size: 16px;
+    }
+}
