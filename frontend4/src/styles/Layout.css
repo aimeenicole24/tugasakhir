@@ -1,0 +1,51 @@
+/* src/styles/layout.css */
+.layout {
+    display: flex; /* Flexbox untuk menata layout */
+    height: 100vh; /* Mengisi seluruh tinggi halaman */
+}
+
+.sidebar {
+    width: 250px; /* Lebar sidebar tetap di kiri */
+    background-color: #2c3e50; /* Warna latar belakang sidebar */
+    color: white;
+    padding: 20px;
+    height: 100%; /* Memastikan sidebar mengisi seluruh tinggi halaman */
+    position: fixed; /* Memastikan sidebar tetap di tempatnya */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Menjaga sidebar di atas konten */
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Menambahkan shadow pada sidebar */
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block; /* Menjadikan link menjadi blok penuh agar bisa mengklik seluruh area */
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #34495e; /* Warna ketika hover */
+}
+
+.main-content {
+    margin-left: 250px; /* Memberikan ruang untuk sidebar di kiri */
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto; /* Membiarkan konten utama bisa di-scroll jika perlu */
+}

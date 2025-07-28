@@ -1,0 +1,209 @@
+/* Container utama dashboard */
+.dashboard {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: none; /* Hilangkan batas max lebar */
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(100, 83, 198, 0.5);
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #282828;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #3c3c3c;
+  padding-left: 5px;
+  border-left: 3px solid #d3b0ff;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Content boxes - lebar penuh dan tanpa batas max-width */
+.overview,
+.quick-actions,
+.statistics,
+.chart-container,
+.projects-list {
+  width: 100%;       /* full lebar container */
+  max-width: none;   /* hilangkan batas max lebar */
+  margin: 20px 0;    /* margin vertikal, tanpa auto center */
+  background-color: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+/* Heading styles */
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card,
+.action-item {
+  margin-bottom: 20px;
+}
+
+/* Statistics layout */
+.statistics {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.statistics .card {
+  flex: 1 1 200px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Logout button */
+.logout-container {
+  margin-top: 30px;
+}
+
+.logout-container button {
+  padding: 10px 20px;
+  background-color: #ffb84d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-container button:hover {
+  background-color: #ffa500;
+}
+
+/* Quick action links */
+.quick-actions {
+  text-align: center;
+}
+
+.quick-actions a {
+  display: block;
+  margin: 10px auto;
+  font-size: 16px;
+  padding: 12px 16px;
+  width: 90%;
+  max-width: 400px;
+  background-color: #5a5a5a;
+  color: #d3b0ff;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quick-actions a:hover {
+  background-color: #7a7a7a;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Chart container */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 200%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .quick-actions a {
+    font-size: 14px;
+    padding: 10px 12px;
+    width: 95%;
+  }
+
+  .statistics {
+    flex-direction: column;
+  }
+
+  .statistics .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

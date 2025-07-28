@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #060616; /* Latar belakang gelap yang konsisten */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Menambahkan padding sedikit di sekitar layar */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.signup-box {
+    background: #34495E; /* Biru gelap yang konsisten */
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%; /* Memungkinkan box untuk menyesuaikan ukuran di layar besar */
+    max-width: 500px; /* Lebar maksimal, sehingga tidak terlalu besar di layar desktop */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box; /* Untuk memastikan padding dan margin tidak mengubah lebar */
+}
+
+.signup-box h1 {
+    font-size: 32px;
+    color: #FFB84D;
+    margin-bottom: 20px;
+}
+
+.subheading {
+    font-size: 16px;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background: #f1f1f1;
+    margin-bottom: 15px; /* Jarak antar input */
+}
+
+.textbox input:focus {
+    background: #ffeb3b;
+}
+
+/* Style untuk Remember me */
+.checkbox {
+    margin-bottom: 20px;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFB84D;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFA500;
+}
+
+.login {
+    margin-top: 20px;
+}
+
+.login a {
+    color: #FFB84D;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* Menyesuaikan responsivitas */
+@media (max-width: 768px) {
+    .signup-box {
+        width: 90%; /* Formulir akan mengambil 90% lebar pada layar kecil */
+        max-width: none;
+    }
+
+    .signup-box h1 {
+        font-size: 28px; /* Menyesuaikan ukuran font judul pada layar kecil */
+    }
+
+    .textbox input {
+        font-size: 14px; /* Ukuran font input lebih kecil pada perangkat kecil */
+    }
+
+    button {
+        font-size: 16px; /* Ukuran font tombol lebih kecil */
+    }
+}

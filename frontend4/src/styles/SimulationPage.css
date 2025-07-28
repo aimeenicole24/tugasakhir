@@ -1,0 +1,33 @@
+.simulation-form {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;  /* Pastikan form berada di atas canvas */
+  background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparan */
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.simulation-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.simulation-form input {
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .simulation-form {
+    width: 100%;
+    left: 10px;
+  }
+}

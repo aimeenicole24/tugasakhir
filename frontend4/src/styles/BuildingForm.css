@@ -1,0 +1,274 @@
+/* Building Form Styles */
+.building-form-container {
+  width: 100%;
+  max-width: 1200px;  /* maksimal 1200px */
+  margin: 0 auto;     /* center dengan margin */
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 100px; /* tambah jarak bawah dari form jadi 60px */
+}
+
+.building-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px; /* Naik dari 24px jadi 25px */
+  color: #333;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  font-size: 15px; /* Naik dari 14px jadi 15px */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-input, .form-submit, select {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px; /* Naik dari 14px jadi 15px */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.form-input:focus, select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-submit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 17px; /* Naik dari 16px jadi 17px */
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+  padding: 11px 10px;
+}
+
+.form-submit:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px; /* Naik dari 14px jadi 15px */
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Results Section */
+.results {
+  margin-top: 60px; /* tambah jarak atas dari hasil jadi 60px */
+  padding: 20px 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left; /* Ubah dari justify ke kiri */
+  
+  font-size: 18.5px;  /* Naik dari 18px jadi 18.5px */
+  color: #444;
+}
+
+.results h3 {
+  font-size: 24.5px;  /* Naik dari 24px jadi 24.5px */
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+  text-align: left; /* Ubah dari center ke kiri */
+  letter-spacing: 0.02em;
+}
+
+.results p {
+  font-size: 18.5px;  /* Naik dari 18px jadi 18.5px */
+  margin-bottom: 6px;
+  line-height: 1.4;
+  color: #444;
+  text-align: left; /* Ubah dari justify ke kiri */
+}
+
+.results ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 17.5px; /* Naik dari 17px jadi 17.5px */
+  color: #555;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.results ul li {
+  margin-bottom: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+  text-align: left; /* Ubah dari justify ke kiri */
+}
+
+.results ul li::before {
+  content: "•";
+  color: #007bff;
+  padding-right: 6px;
+}
+
+.results h4 {
+  font-size: 20.5px; /* Naik dari 20px jadi 20.5px */
+  font-weight: 600;
+  color: #f6f2f2;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.results h5 {
+  font-size: 20.5px; /* Naik dari 20px jadi 20.5px */
+  font-weight: 600;
+  color: #0c0c0c;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+.results .result-header {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Grafik & Chart Styles */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.chart-container .chart {
+  width: 80%;
+  max-width: 700px;
+  margin-bottom: 15px;
+  background-color: #ffffff;  /* DIUBAH jadi putih */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.chart-container .chart canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .building-form-container {
+    width: 90%;
+    margin-bottom: 50px; /* sesuaikan jarak bawah di responsive */
+  }
+
+  .results {
+    width: 100%;
+    max-width: none;
+    margin-top: 50px; /* sesuaikan jarak atas di responsive */
+    padding: 20px 15px;
+
+    font-size: 17.5px; /* Naik dari 17px jadi 17.5px */
+    text-align: left; /* Ubah dari justify ke kiri */
+  }
+
+  .results h3 {
+    font-size: 22.5px; /* Naik dari 22px jadi 22.5px */
+    text-align: left; /* Tambahkan */
+  }
+
+  .results p, .results ul li {
+    font-size: 16.5px; /* Naik dari 16px jadi 16.5px */
+    text-align: left; /* Tambahkan */
+  }
+
+  .results h4 {
+    font-size: 18.5px; /* Naik dari 18px jadi 18.5px */
+    text-align: left; /* Tambahkan */
+  }
+
+  .chart-container .chart {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+}
+
+/* Desktop 1024px - 1440px */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .building-form-container {
+    width: 75%;
+    margin: 20px auto 60px auto; /* bawah 60px */
+  }
+
+  .results {
+    width: 75%;
+    max-width: 600px;
+    margin: 60px auto 15px auto; /* atas 60px */
+    padding: 25px 30px;
+    font-size: 18.5px; /* Naik dari 18px jadi 18.5px */
+    text-align: left; /* Ubah dari justify ke kiri */
+  }
+
+  .results h3 {
+    font-size: 24.5px;
+    margin-bottom: 12px;
+    text-align: left; /* Tambahkan */
+  }
+
+  .results p, .results ul li {
+    font-size: 18.5px;
+    margin-bottom: 6px;
+    line-height: 1.4;
+    text-align: left; /* Tambahkan */
+  }
+
+  .results h4 {
+    font-size: 20.5px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    text-align: left; /* Tambahkan */
+  }
+
+  .chart-container .chart {
+    width: 80%;
+    max-width: 900px;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+
+  .form-input, .form-submit, select {
+    font-size: 16.5px; /* Naik dari 16px jadi 16.5px */
+  }
+
+  h2 {
+    font-size: 28.5px; /* Naik dari 28px jadi 28.5px */
+  }
+
+  .form-submit {
+    font-size: 18.5px; /* Naik dari 18px jadi 18.5px */
+    padding: 12px;
+  }
+}

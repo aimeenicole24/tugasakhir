@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #160b40, #2a5298, #4e73df); /* Perubahan pada gradasi background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-size: cover;
+    color: #fff;
+    animation: gradientShift 15s ease infinite;
+    background-attachment: fixed;
+}
+
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Box Styles */
+.login-box {
+    background: rgba(0, 0, 0, 0.7); /* Sedikit lebih gelap untuk kontras */
+    padding: 40px;
+    border-radius: 20px; /* Bentuk lebih bulat */
+    width: 400px;
+    box-shadow: 0 0 60px rgba(100, 83, 198, 0.5);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #d3b0ff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+}
+
+.subheading {
+    font-size: 16px;
+    color: #d1d1d1;
+    margin-bottom: 20px;
+}
+
+.textbox {
+    margin-bottom: 20px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px; /* Membulatkan input field */
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.textbox input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(211, 176, 255, 0.6);
+    outline: 2px solid #d3b0ff;
+}
+
+::placeholder {
+    color: #ccc;
+    opacity: 0.8;
+    transition: color 0.3s ease;
+}
+
+/* Checkbox Styles */
+.checkbox {
+    margin-bottom: 20px;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #d3b0ff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #b289e6;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(211, 176, 255, 0.2);
+}
+
+button:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) inset;
+}
+
+/* Signup Link Styles */
+.signup {
+    margin-top: 20px;
+}
+
+.signup a {
+    color: #d3b0ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Error Message Styles */
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+    .login-box {
+        width: 90%;
+    }
+    .textbox input {
+        font-size: 14px;
+    }
+}
+
+/* Icons Integration */
+.textbox input {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/user.svg'); /* Menambahkan icon pada input */
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px; /* Memberi jarak antara teks dan icon */
+}
+
+/* Hover Animation for Background */
+body:hover {
+    background: linear-gradient(135deg, #2a5298, #160b40, #4e73df); /* Menambah efek interaktif saat hover */
+}
