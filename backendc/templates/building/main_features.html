@@ -1,0 +1,27 @@
+<!-- Di templates/building/main_features.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Features</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Main Features</h1>
+    
+    <!-- Menampilkan fitur utama -->
+    <div class="features-container">
+        {% if features %}
+            {% for feature in features %}
+                <div class="feature-card">
+                    <i class="{{ feature.icon_class }}"></i>  <!-- Menampilkan ikon -->
+                    <h3>{{ feature.title }}</h3>
+                    <p>{{ feature.description }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No features available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

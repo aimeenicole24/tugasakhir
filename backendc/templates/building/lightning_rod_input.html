@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightning Rod Input</title>
+</head>
+<body>
+    <h1>Lightning Rod Input for {{ building.get_building_type_display }} - {{ building.get_location_display }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="position_x" value="{{ position_x }}">
+        <input type="hidden" name="position_y" value="{{ position_y }}">
+        <input type="hidden" name="distance" value="{{ distance }}">
+        <input type="hidden" name="protection_level" value="{{ protection_level }}">
+        <button type="submit">Save Lightning Rod</button>
+    </form>
+    <p>Calculated Position X: {{ position_x }}</p>
+    <p>Calculated Position Y: {{ position_y }}</p>
+    <p>Calculated Distance: {{ distance }}</p>
+    <p>Calculated Protection Level: {{ protection_level }}</p>
+</body>
+</html>

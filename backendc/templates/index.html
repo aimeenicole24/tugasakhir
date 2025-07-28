@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Proteksi Petir</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistem Proteksi Petir</h1>
+        <form id="building-form">
+            <label for="building_type">Tipe Bangunan:</label>
+            <input type="text" id="building_type" name="building_type" placeholder="Masukkan tipe bangunan" required><br>
+
+            <label for="total_height">Total Tinggi (m):</label>
+            <input type="number" id="total_height" name="total_height" placeholder="Masukkan total tinggi" required><br>
+
+            <label for="total_length">Panjang Bangunan (m):</label>
+            <input type="number" id="total_length" name="total_length" placeholder="Masukkan panjang bangunan" required><br>
+
+            <label for="total_width">Lebar Bangunan (m):</label>
+            <input type="number" id="total_width" name="total_width" placeholder="Masukkan lebar bangunan" required><br>
+
+            <button type="submit">Hitung</button>
+        </form>
+
+        <div id="results">
+            <!-- Hasil perhitungan akan ditampilkan di sini -->
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

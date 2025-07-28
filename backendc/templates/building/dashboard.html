@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    
+    <!-- Memuat tag static -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Welcome, {{ user.username }}!</h1>
+
+    <div class="overview">
+        <h2>Active Project Overview</h2>
+        <div class="project-summary">
+            <p><strong>Building Name:</strong> XYZ</p>
+            <p><strong>Building Location:</strong> Surabaya</p>
+        </div>
+
+        <div class="quick-actions">
+            <button class="btn">New Input</button>
+            <button class="btn">View Simulation</button>
+            <button class="btn">Generate Report</button>
+        </div>
+
+        <div class="statistics">
+            <h3>Statistics</h3>
+            <div class="stat-card">
+                <p>Active Projects: {{ active_projects }}</p>
+                <p>Completed Projects: {{ completed_projects }}</p>
+                <p>Pending Projects: {{ pending_projects }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-list">
+        <h2>Projects List</h2>
+        <ul>
+            {% for project in projects %}
+                <li>{{ project.name }} - {{ project.location }} - {{ project.status }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<form method="post" action="{% url 'add_building' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    <!-- Hapus input untuk Position X, Position Y, Distance -->
+    
+    <button type="submit">Submit</button>
+</form>
+
+{% if protection_radius %}
+    <h2>Results</h2>
+    <p>Protection Radius: {{ protection_radius }} meters</p>
+    <p>Number of Lightning Rods: {{ number_of_lightning_rods }}</p>  <!-- Updated variable name -->
+    
+    <!-- Tampilkan hasil perhitungan untuk Position X, Position Y, dan Distance -->
+    <p>Position X: {{ position_x }} meters</p>
+    <p>Position Y: {{ position_y }} meters</p>
+    <p>Distance: {{ distance }} meters</p>  <!-- Display the calculated distance -->
+    <p>Protection Level: {{ protection_level }}</p>
+    <p>Risk Index: {{ risk_index }}</p>  <!-- Display the calculated risk index -->
+    <p>Level of Damage: {{ level_of_damage }}</p>  <!-- Display the calculated level of damage -->
+     <!-- Display Protection Recommendations -->
+     <h3>Protection Recommendations:</h3>
+     <ul>
+         {% for recommendation in protection_recommendations %}
+             <li>{{ recommendation }}</li>
+         {% endfor %}
+     </ul>
+     
+     <!-- Display Arrester Installation Table -->
+     {% if arrester_data %}
+     <h3>Arrester Installation</h3>
+     <table>
+         <thead>
+             <tr>
+                 <th>Building Type</th>
+                 <th>Arrester Type</th>
+                 <th>Installation</th>
+             </tr>
+         </thead>
+         <tbody>
+             {% for item in arrester_data %}
+                 <tr>
+                     <td>{{ item.Building_Type }}</td>
+                     <td>{{ item.Arrester_Type }}</td>
+                     <td>{{ item.Installation }}</td>
+                 </tr>
+             {% endfor %}
+         </tbody>
+     </table>
+    {% else %}
+     <p>No arrester data available for the selected building type.</p>
+    {% endif %}
+
+    <!-- Di templates/bulding/add_building.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Building Input</title>
+</head>
+<body>
+    <h1>Building Input Form</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Menampilkan fitur utama -->
+    <h2>Main Features</h2>
+    <div class="features-container">
+        {% for feature in features %}
+            <div class="feature-card">
+                <i class="{{ feature.icon_class }}"></i>  <!-- Menampilkan ikon -->
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+{% endif %}

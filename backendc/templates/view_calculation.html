@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="calculation-result">
+    <h1>Calculation Results</h1>
+    
+    <!-- Menampilkan Radius Perlindungan -->
+    <h2>Protection Radius</h2>
+    <p>{{ protection_radius }} meters</p>
+
+    <!-- Menampilkan Area Perlindungan -->
+    <h2>Area of Protection</h2>
+    <p>{{ area_of_protection }}%</p>
+
+    <!-- Menampilkan Arus Petir -->
+    <h2>Lightning Strike Current</h2>
+    <p>{{ lightning_strike_current }} W/km</p>
+
+    <!-- Menampilkan Grafik Radius -->
+    <h2>Radius Graph</h2>
+    <p>{{ radius_graph }}</p>
+
+    <!-- Menampilkan Peringatan jika ada -->
+    {% if warning_message %}
+      <div class="warning-message">
+        <strong>Warning:</strong> {{ warning_message }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}
